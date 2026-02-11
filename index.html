@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>GATO 🐱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <h1>🐱 GATO</h1>
+  <p>Gestor de Arquivos Tugas Online</p>
+</header>
+
+<section class="login">
+  <input id="username" placeholder="@teuGattag" />
+  <button onclick="login()">Entrar</button>
+</section>
+
+<section id="app" class="hidden">
+
+  <h2 id="welcome"></h2>
+
+  <div class="new-post">
+    <textarea id="postText" placeholder="Escreve o teu post..."></textarea>
+    <button onclick="addPost()">Publicar</button>
+  </div>
+
+  <div id="feed"></div>
+
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
