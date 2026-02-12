@@ -1,83 +1,26 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  margin: 0;
-  padding: 0;
+body { font-family: Arial; margin:0; background:#f2f2f2; }
+header { background:#4CAF50; color:white; text-align:center; padding:20px; }
+.hidden { display:none; }
+
+input, textarea, button {
+  width:100%; padding:8px; margin:5px 0; border-radius:5px; border:1px solid #ccc; box-sizing:border-box;
 }
+button { background:#4CAF50; color:white; cursor:pointer; }
+button:hover { background:#45a049; }
 
-header {
-  background: #4CAF50;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
+.tabs { display:flex; gap:5px; margin:15px 0; }
+.tab-btn { padding:8px 15px; border:none; background:#ddd; border-radius:5px 5px 0 0; cursor:pointer; }
+.tab-btn.active { background:#4CAF50; color:white; }
+.god-btn { display:none; }
 
-h2, h3, h4 {
-  margin: 10px 0 5px 0;
-}
+.tab-content { background:white; padding:15px; border-radius:0 8px 8px 8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
+.tab { display:none; }
+.tab.active { display:block; }
 
-.hidden { display: none; }
+.blog-card { border:1px solid #ccc; padding:10px; margin:10px 0; border-radius:5px; }
+.blog-title { font-weight:bold; }
+.post { background:#f9f9f9; padding:8px; margin:5px 0; border-radius:5px; }
+.god-user { display:flex; justify-content:space-between; margin-bottom:8px; }
+.god-user button { margin-left:5px; padding:4px 6px; font-size:12px; }
 
-.login-section {
-  text-align: center;
-  margin: 20px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  padding: 8px 12px;
-  border: none;
-  background: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover { background: #45a049; }
-
-/* ABAS */
-.tabs {
-  display: flex;
-  gap: 5px;
-  margin: 15px 0;
-}
-.tab-btn {
-  padding: 8px 15px;
-  border: none;
-  background: #ddd;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-}
-.tab-btn.active { background: #4CAF50; color: white; }
-.god-btn { display: none; }
-
-/* CONTEÚDO DAS ABAS */
-.tab-content { background: white; padding: 15px; border-radius: 0 8px 8px 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.tab { display: none; }
-.tab.active { display: block; }
-
-/* POSTS E MENSAGENS */
-.post { background: #f9f9f9; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
-.message { background: #e8f5e9; padding: 8px; margin-bottom: 5px; border-radius: 5px; }
-
-/* GOD MODE CARD */
-.god-user {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-.god-user button { margin-left: 5px; padding: 4px 6px; font-size: 12px; }
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .tabs { flex-direction: column; }
-}
+@media(max-width:900px){ .tabs{flex-direction:column;} }
