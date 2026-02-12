@@ -10,7 +10,7 @@
 
 <header>
   <h1>🐱 GATO</h1>
-  <p>Feed Nacional, Blogs, Mensagens e God Mode</p>
+  <p>Feed Nacional, Blogs e Mensagens</p>
 </header>
 
 <!-- LOGIN / CRIAÇÃO DE CONTA -->
@@ -27,37 +27,40 @@
   <h2 id="welcome"></h2>
   <button id="logoutBtn">Sair</button>
 
-  <div class="dashboard">
+  <!-- ABAS -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="feedTab">Feed</button>
+    <button class="tab-btn" data-tab="publishTab">Publicar</button>
+    <button class="tab-btn" data-tab="messagesTab">Mensagens</button>
+    <button class="tab-btn god-btn" data-tab="godTab">God Mode</button>
+  </div>
 
-    <!-- CRIAR POST -->
-    <div class="dashboard-card post-card">
-      <h3>Criar Post</h3>
+  <div class="tab-content">
+
+    <!-- FEED -->
+    <div id="feedTab" class="tab active">
+      <div id="feed"></div>
+    </div>
+
+    <!-- PUBLICAR -->
+    <div id="publishTab" class="tab">
       <textarea id="postText" placeholder="Escreve o teu post..."></textarea>
       <button id="addPostBtn">Publicar</button>
     </div>
 
-    <!-- FEED NACIONAL -->
-    <div class="dashboard-card feed-card">
-      <h3>Feed Nacional</h3>
-      <div id="feed"></div>
-    </div>
-
-    <!-- MENSAGENS PRIVADAS -->
-    <div class="dashboard-card message-card">
-      <h3>Mensagens Privadas</h3>
+    <!-- MENSAGENS -->
+    <div id="messagesTab" class="tab">
       <input type="text" id="msgTo" placeholder="Para @GATTAG">
       <textarea id="msgText" placeholder="Escreve a tua mensagem..."></textarea>
       <button id="sendMsgBtn">Enviar Mensagem</button>
-
-      <div id="inbox">
-        <h4>Caixa de Entrada</h4>
-        <div id="messages"></div>
-      </div>
+      <h4>Caixa de Entrada</h4>
+      <div id="messages"></div>
     </div>
 
-    <!-- ABA EXCLUSIVA GOD MODE -->
-    <div id="godModeSection" class="dashboard-card" style="display:none;">
-      <h3>God Mode 🛡️</h3>
+    <!-- GOD MODE (APENAS PARA GODS) -->
+    <div id="godTab" class="tab">
+      <input type="text" id="searchGod" placeholder="Procurar @GATTAG 🔍">
+      <button id="searchGodBtn">Procurar</button>
       <div id="godUsers"></div>
     </div>
 
